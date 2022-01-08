@@ -2,6 +2,7 @@
 	<div>
 		<Header />
 		<main>
+about
 		</main>
 		<Footer />
 	</div>
@@ -16,7 +17,3 @@
 		}
 	};
 </script>
-
-<style lang="scss">
-
-</style>

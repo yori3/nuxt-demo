@@ -44,3 +44,8 @@ export default {
   build: {
   }
 }
+module.exports = {
+  css: [
+    '@/assets/css/style.css',
+  ],
+}
