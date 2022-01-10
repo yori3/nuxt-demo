@@ -1,13 +1,21 @@
 <template>
-  <main class="main">
-    <h1 class="title">{{ title }}</h1>
-    <p class="publishedAt">{{ publishedAt }}</p>
-    <div class="post" v-html="content"></div>
-  </main>
+	<div>
+		<Header />
+		<main>
+      <div class="inner">
+        <h1 class="title">{{ title }}</h1>
+        <p class="publishedAt">{{ publishedAt }}</p>
+        <div class="post" v-html="content"></div>
+      </div>
+    </main>
+		<Footer />
+  </div>
 </template>
 
 <script>
 import axios from 'axios'
+import Header from "@/components/header.vue";
+import Footer from "@/components/footer.vue";
 
 export default {
   async asyncData({ params }) {
@@ -18,6 +26,10 @@ export default {
       }
     )
     return data
-  }
+  },
+  components: {
+    Header,
+    Footer
+  },
 }
 </script>

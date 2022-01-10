@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<header>
-			<h1>Site</h1>
+			<div class="siteName">Site</div>
       <div class="headerMenu">
 			<HeaderNav />
       </div>
@@ -23,8 +23,8 @@ header{
   justify-content: space-between;
   align-items: center;
   padding: 1.5em 4%;
-  h1{
-    margin: 0;
+  .siteName{
+    font-size: 2em;
   }
 }
 </style>

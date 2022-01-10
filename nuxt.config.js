@@ -38,7 +38,13 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    'nuxt-webfontloader'
   ],
+  webfontloader: {
+    google: {
+      families: ['Noto+Sans+JP:400,700']
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -46,6 +52,6 @@ export default {
 }
 module.exports = {
   css: [
-    '@/assets/css/style.css',
+    '@/assets/css/style.scss',
   ],
 }

@@ -3,12 +3,14 @@
 		<Header />
 		<main>
       <div id="content">
-        <h1>お知らせ一覧</h1>
-        <div class="newsList">
-          <div class="newsList__item" v-for="content in contents" :key="content.id">
-            <nuxt-link :to="`/${content.id}`">
-              <h2>{{ content.title }}</h2>
-            </nuxt-link>
+        <div class="inner">
+          <h1>お知らせ一覧</h1>
+          <div class="newsList">
+            <div class="newsList__item" v-for="content in contents" :key="content.id">
+              <nuxt-link :to="`/${content.id}`">
+                <h2>{{ content.title }}</h2>
+              </nuxt-link>
+            </div>
           </div>
         </div>
       </div>
@@ -40,21 +42,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h1{
-  position: relative;
-  padding-left: 20px;
-  color: #333;
-  &::after{
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 10px;
-    height: 100%;
-    background-color: blue;
-    content: "";
-  }
-}
 
 .newsList{
   &__item{
