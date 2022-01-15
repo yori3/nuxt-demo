@@ -6,7 +6,7 @@ export default {
   head: {
     title: 'nuxt-demo',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'jp'
     },
     meta: [
       { charset: 'utf-8' },
@@ -15,12 +15,14 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/css/style.scss',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -38,20 +40,19 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
+    '@nuxtjs/style-resources',
   ],
   webfontloader: {
     google: {
       families: ['Noto+Sans+JP:400,700']
     }
   },
+  styleResources: {
+    scss: ['~/assets/scss/_setting.scss'],
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
-}
-module.exports = {
-  css: [
-    '@/assets/css/style.scss',
-  ],
 }

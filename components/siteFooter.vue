@@ -1,23 +1,27 @@
 <template>
-	<div>
-		<footer>
+  <div>
+    <footer>
       <p class="copyright">copyright © West project All Rights Reserved.</p>
     </footer>
-	</div>
+  </div>
 </template>
 <script>
-	export default {};
+export default {
+
+}
 </script>
 
 <style lang="scss" scoped>
   footer{
     margin-top: 6em;
-    padding: 2em 0;
+    padding: 1.5em 0;
     background-color: #666;
     color: #fff;
   }
 
   .copyright{
+    margin: 0;
     text-align: center;
+    font-size: 10px;
   }
 </style>

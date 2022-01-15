@@ -1,28 +1,28 @@
 <template>
-	<div>
-		<Header />
-		<main>
+  <div>
+    <Header />
+    <main>
       <div id="content">
         <div class="inner">
           <h1>お知らせ一覧</h1>
-          <div class="newsList">
-            <div class="newsList__item" v-for="content in contents" :key="content.id">
+          <div class="newsArchive">
+            <div class="newsArchive__item" v-for="content in contents" :key="content.id">
               <nuxt-link :to="`/${content.id}`">
-                <h2>{{ content.title }}</h2>
+                <h2 class="newsArchive__title">{{ content.title }}</h2>
               </nuxt-link>
             </div>
           </div>
         </div>
       </div>
-		</main>
-		<Footer />
-	</div>
+    </main>
+    <Footer />
+  </div>
 </template>
 
 <script>
-import axios from 'axios';
-import Header from "@/components/header.vue";
-import Footer from "@/components/footer.vue";
+import axios from 'axios'
+import Header from '@/components/siteHeader.vue'
+import Footer from '@/components/siteFooter.vue'
 
 export default {
   async asyncData() {
@@ -42,15 +42,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.newsList{
-  &__item{
-    margin-bottom: 1.5em;
-    h2{
-      color: #666;
-    }
-  }
-}
 
 
 </style>

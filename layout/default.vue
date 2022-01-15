@@ -1,19 +1,19 @@
 <template>
-	<div>
-		<Header />
-		<main>
-			<nuxt />
-		</main>
-		<Footer />
-	</div>
+  <div>
+    <Header />
+    <main>
+      <nuxt />
+    </main>
+    <Footer />
+  </div>
 </template>
 <script>
-	import Header from "@/components/header.vue";
-	import Footer from "@/components/footer.vue";
-	export default {
-		components: {
-			Header,
-			Footer
-		}
-	};
+import Header from '@/components/siteHeader.vue'
+import Footer from '@/components/siteFooter.vue'
+  export default {
+    components: {
+      Header,
+      Footer
+    }
+  };
 </script>
